@@ -1,0 +1,23 @@
+{
+  "name": "algoritmpractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wlsgml719/algoritmPractice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wlsgml719/algoritmPractice/issues"
+  },
+  "homepage": "https://github.com/wlsgml719/algoritmPractice#readme",
+  "devDependencies": {
+    "@types/jest": "^29.2.5",
+    "jest": "^29.3.1"
+  }
+}
