@@ -7,11 +7,8 @@
  * @returns {number}
  */
 function solution(n) {
-  var answer = 0;
-
-  for (let i of n.toString().split("")) {
-    answer += parseInt(i);
-  }
-
-  return answer;
+  return n
+    .toString()
+    .split("")
+    .reduce((acc, curr) => (acc += parseInt(curr)), 0);
 }
