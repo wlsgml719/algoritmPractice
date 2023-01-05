@@ -12,13 +12,5 @@
  * @returns {Boolean}
  */
 function solution(s) {
-  // 문자열에 포함된 p, y문자의 개수를 구한다.
-  const p = s.match(/p|P/g);
-  const y = s.match(/y|Y/g);
-
-  // 둘 중 하나도 없는 경우
-  if (!p?.length && !y?.length) true;
-
-  // 개수가 같은 경우 : 같지 않은경우
-  return p?.length === y?.length ? true : false;
+  return s.match(/p|P/g)?.length === s.match(/y|Y/g)?.length;
 }
