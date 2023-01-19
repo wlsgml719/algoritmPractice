@@ -11,10 +11,12 @@
  */
 function solution(price) {
   return price.reduce((acc, curr, ci) => {
+    // 선형검색
     const bigger = price.findIndex((e, i) => {
       return i > ci && e > curr;
     });
 
+    // 조건을 만족하는 인덱스가 없는 경우(-1) : 조건을 만족하는 인덱스가 있는 경우(해당 인덱스)
     bigger == -1 ? acc.push(bigger) : acc.push(bigger - ci);
 
     return acc;
