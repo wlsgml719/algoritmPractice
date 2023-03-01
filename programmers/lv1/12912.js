@@ -9,20 +9,16 @@
  *
  * @param {number} a
  * @param {number} b
- * @complexity
+ * @complexity O(n)
  */
 function solution(a, b) {
-  let smaller, bigger;
   if (a === b) return a;
-  let answer = 0;
+  let s = 0;
 
-  a > b ? ((smaller = b), (bigger = a)) : ((smaller = a), (bigger = b));
-
-  for (let i = smaller; i < bigger; i++) {
-    answer += i;
+  for (let i = Math.min(a, b); i <= Math.max(a, b); i++) {
+    s += i;
   }
-
-  return answer + bigger;
+  return s;
 }
 
 solution(10, 8);
