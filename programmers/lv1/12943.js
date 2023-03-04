@@ -14,17 +14,13 @@
  * @timecomplexity O(logn)
  */
 function solution(num) {
-  if (num === 1) return 0;
   let count = 0;
 
-  do {
-    if (num === 1) break;
-
+  while (num != 1 && count != 500) {
     count++;
     num = num % 2 === 0 ? num / 2 : num * 3 + 1;
-  } while (count < 500);
-
-  return count === 500 ? -1 : count;
+  }
+  return num === 1 ? count : -1;
 }
 
 solution(6);
