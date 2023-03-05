@@ -13,8 +13,8 @@
  * @param {Array} seoul
  * @complexity O(n)
  */
-function solution(seoul) {
+function findKim(seoul) {
   return "김서방은 " + seoul.findIndex((v) => v === "Kim") + "에 있다";
 }
 
-solution(["Kang", "Na", "Park", "Sin", "Jang", "Kim", "Ha"]);
+findKim(["Kang", "Na", "Park", "Sin", "Jang", "Kim", "Ha"]);
