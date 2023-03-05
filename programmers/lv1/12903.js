@@ -9,9 +9,10 @@
  * @complexity O(1)
  */
 function solution(s) {
-  return s.length % 2 === 0
-    ? s.substring(Math.ceil(s.length / 2) - 1, Math.ceil(s.length / 2) + 1)
-    : s.substring(Math.ceil(s.length / 2) - 1, Math.ceil(s.length / 2));
+  return s.substring(
+    Math.ceil(s.length / 2) - 1,
+    s.length % 2 === 0 ? Math.ceil(s.length / 2) + 1 : Math.ceil(s.length / 2)
+  );
 }
 
-solution("가나다라마바사");
+solution("가나다라마바사아");
