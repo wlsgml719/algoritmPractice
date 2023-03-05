@@ -9,9 +9,10 @@
  * s는 영문 알파벳 대소문자 또는 0부터 9까지 숫자로 이루어져 있습니다
  * @param {string} s
  * @complexity O(1)
+ * @accuracy 96.7%
  */
 function solution(s) {
-  return Number.isInteger(+s);
+  return Number.isInteger(+s) && (s.length === 4 || s.length === 6);
 }
 
-solution("asda23123");
+solution("1234dd");
