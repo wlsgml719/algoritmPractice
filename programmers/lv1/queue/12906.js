@@ -18,19 +18,7 @@
  * @spaceComplexity O(n)
  */
 function removeDuplicate(arr) {
-  let result = [];
-  let cur = arr[0];
-
-  for (let idx in arr) {
-    // 현재 값과 같다면 멈춘다.
-    if (idx > 0 && cur == arr[idx]) continue;
-
-    // 현재 값과 다르다면, 결과에 값을 추가한다.
-    result.push(arr[idx]);
-    cur = arr[idx];
-  }
-
-  return result;
+  return arr.filter((v, i) => v != arr[i + 1]);
 }
 
 removeDuplicate([1, 1, 1, 1, 1, 3, 3, 0, 1, 1]);
