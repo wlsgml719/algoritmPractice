@@ -14,18 +14,17 @@ function correctBracket(s) {
   for (let i in s) {
     if (s[i] == "(") {
       // "(" 일 때 n은 1 증가
-
-      // 이전 값이 ) 일 때, n이 0이 아니라면 올바른 괄호가 아님
-      if (s[i - 1] == ")" && n != 0) {
-        return false;
-      }
       n++;
     } else {
       // ")" 일 때 n은 1 감소
       n--;
     }
+
+    // 순서가 잘못된 경우
+    if (n < 0) return false;
   }
-  return true;
+
+  return n === 0;
 }
 
-correctBracket("(()()())))()())");
+console.log(correctBracket("))("));
