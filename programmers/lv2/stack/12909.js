@@ -7,24 +7,23 @@
  * @returns {boolean} 올바른 괄호면 true / 올바르지 않은 괄호면 false 반환
  *
  * @timeComplexity O(n)
+ *
+ * @accuracy 69.5
+ * @efficiency 30.5
  */
 function correctBracket(s) {
-  let n = 0;
+  let stack = [];
 
-  for (let i in s) {
-    if (s[i] == "(") {
-      // "(" 일 때 n은 1 증가
-      n++;
+  for (let char of s) {
+    if (char === "(") {
+      stack.push("(");
     } else {
-      // ")" 일 때 n은 1 감소
-      n--;
+      if (stack.length === 0) return false;
+      stack.pop();
     }
-
-    // 순서가 잘못된 경우
-    if (n < 0) return false;
   }
 
-  return n === 0;
+  return stack.length === 0;
 }
 
 console.log(correctBracket("))("));
