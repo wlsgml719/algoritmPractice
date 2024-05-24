@@ -10,21 +10,15 @@
     입력: 첫째 줄에 (1)의 위치에 들어갈 세 자리 자연수가, 둘째 줄에 (2)의 위치에 들어갈 세자리 자연수가 주어진다.
     출력: 첫째 줄부터 넷째 줄까지 차례대로 (3), (4), (5), (6)에 들어갈 값을 출력한다.
 '''
-# num2 = input()
-# print(num2_c % 10) # TypeError: not all arguments converted during string formatting
 num1 = int(input())
-num2 = int(input())
-temp = 0
-sum = 0
+num2 = input()
+num2_list = list(num2) # 문자열을 반복해 요소 분리
 
-for i in range(3) :
-    temp = (num2 % 10 * num1) * 10 ** i # num2의 1의자리와 num1을 곱하여 더한다.
-    print(temp) # 단계별 결과를 출력한다.
+print(num1 * int(num2_list[2]), num1 * int(num2_list[1]), num1 * int(num2_list[0]), num1 * int(num2), sep="\n")
 
-    sum += temp # 단계별 결과를 합산결과에 합한다.
-    num2 //= 10 # 자릿수를 10으로 나누어 1의자리를 교체한다.
-print(sum) # 합산 결과를 출력한다.
 
-''' (fail) 틀렸습니다
-    코드길이: 182 B
+''' (success) 맞았습니다.
+    메모리: 31120 KB
+    시간: 44 ms
+    코드길이: 170 B
 '''
