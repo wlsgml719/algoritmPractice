@@ -8,9 +8,11 @@
 count = int(input())
 
 for i in range(count):
-    first, second = map(int, input().split())
-    print("Case #{}: ".format(i+1), first + second)
+    a, b = map(int, input().split())
+    print("Case #%s: %s"%(format(i+1), a + b))
 
-''' (fail) 출력형식이 잘못되었습니다.
-    코드길이: 142 B
+''' (success)
+    메모리: 31120 KB
+    시간: 40 ms
+    코드길이: 128 B
 '''
