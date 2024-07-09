@@ -6,18 +6,11 @@
     출력: 각 테스트 케이스마다 "Case #x: "를 출력한 다음, A+B를 출력한다. 테스트 케이스 번호는 1부터 시작한다.
 '''
 count = int(input())
-numbers = []
 
 for i in range(count):
     first, second = map(int, input().split())
-    numbers.append(first)
-    numbers.append(second)
-
-for i in range(count):
-    index = 2*i
-    print("Case #{}: ".format(i+1), numbers[index] + numbers[index+1])
-
+    print("Case #{}: ".format(i+1), first + second)
 
 ''' (fail) 출력형식이 잘못되었습니다.
-    코드길이: 267 B
+    코드길이: 142 B
 '''
